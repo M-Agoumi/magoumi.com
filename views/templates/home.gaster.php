@@ -1,144 +1,148 @@
 <!DOCTYPE html>
 <html>
-<style>
-	body, html {
-		height: 100%;
-		margin: 0;
-	}
+	<head>
+	<style>
+		body, html {
+			height: 100%;
+			margin: 0;
+		}
 
-	.bgimg {
-		background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
-		height: 100%;
-		background-position: center;
-		background-size: cover;
-		position: relative;
-		color: white;
-		font-family: "Courier New", Courier, monospace;
-		font-size: 25px;
-	}
+		.bgimg {
+			background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+			height: 100%;
+			background-position: center;
+			background-size: cover;
+			position: relative;
+			color: white;
+			font-family: "Courier New", Courier, monospace;
+			font-size: 25px;
+		}
 
-	.topleft {
-		position: absolute;
-		top: 0;
-		left: 16px;
-	}
+		.topleft {
+			position: absolute;
+			top: 0;
+			left: 16px;
+		}
 
-	.bottomleft {
-		position: absolute;
-		bottom: 0;
-		left: 16px;
-		-webkit-user-select: none; /* Safari */
-		-moz-user-select: none; /* Firefox */
-		-ms-user-select: none; /* IE10+/Edge */
-		user-select: none; /* Standard */
-	}
+		.bottomleft {
+			position: absolute;
+			bottom: 0;
+			left: 16px;
+			-webkit-user-select: none; /* Safari */
+			-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+/Edge */
+			user-select: none; /* Standard */
+		}
 
-	.middle {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		text-align: center;
-	}
+		.middle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
 
-	hr {
-		margin: auto;
-		width: 40%;
-	}
-	@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+		hr {
+			margin: auto;
+			width: 40%;
+		}
+		@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
 
-	* {
-		margin: 0;
-		padding: 0;
-	}
+		* {
+			margin: 0;
+			padding: 0;
+		}
 
-	html {
-		font-size: 20px;
-		font-family: 'Roboto', sans-serif;
-	}
+		html {
+			font-size: 20px;
+			font-family: 'Roboto', sans-serif;
+		}
 
-	body {
-		background: linear-gradient(90deg, #ff9966, #ff5e62);
-	}
+		body {
+			background: linear-gradient(90deg, #ff9966, #ff5e62);
+		}
 
-	.wrapper {
-		height: 100vh;
-		min-width: 600px;
-		position: absolute;
-		display: none;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
-		z-index: 10;
-	}
+		.wrapper {
+			height: 100vh;
+			min-width: 600px;
+			position: absolute;
+			display: none;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			z-index: 10;
+		}
 
-	#bluer {
-		height: 100%;
-		width: 100%;
-		background: rgba(0,0,0,0.7);
-		position: absolute;
-		top: 0;
-		left: 0;
-		display: none;
-		cursor: pointer;
-	}
+		#bluer {
+			height: 100%;
+			width: 100%;
+			background: rgba(0,0,0,0.7);
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+			cursor: pointer;
+		}
 
-	.fas.fa-envelope {
-		color: #fff;
-		font-size: 2rem;
-		background: #333;
-		padding: 1rem;
-		border-radius: 100%;
-		margin: 0 0 1rem 0;
-	}
+		.fas.fa-envelope {
+			color: #fff;
+			font-size: 2rem;
+			background: #333;
+			padding: 1rem;
+			border-radius: 100%;
+			margin: 0 0 1rem 0;
+		}
 
-	.card-content {
-		max-width: 30rem;
-		background-color: #fff;
-		position: relative;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
-		border-radius: 1rem;
-		padding: 4rem .5rem;
-		box-shadow: 1px 1px 2rem rgba(0,0,0,.3);
-		text-align: center;
-	}
+		.card-content {
+			max-width: 30rem;
+			background-color: #fff;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			border-radius: 1rem;
+			padding: 4rem .5rem;
+			box-shadow: 1px 1px 2rem rgba(0,0,0,.3);
+			text-align: center;
+		}
 
-	.card-content h1 {
-		text-transform: uppercase;
-		margin: 0 0 1rem 0;
-	}
+		.card-content h1 {
+			text-transform: uppercase;
+			margin: 0 0 1rem 0;
+		}
 
-	.card-content p {
-		font-size: .8rem;
-		margin: 0 0 2rem 0;
-	}
+		.card-content p {
+			font-size: .8rem;
+			margin: 0 0 2rem 0;
+		}
 
-	input {
-		padding: .8rem 1rem;
-		width: 40%;
-		border-radius: 5rem;
-		outline: none;
-		border: .1rem solid #d1d1d1;
-		font-size: .7rem;
-	}
+		input {
+			padding: .8rem 1rem;
+			width: 40%;
+			border-radius: 5rem;
+			outline: none;
+			border: .1rem solid #d1d1d1;
+			font-size: .7rem;
+		}
 
-	::placeholder {
-		color: #d1d1d1;
-	}
+		::placeholder {
+			color: #d1d1d1;
+		}
 
-	.subscribe-btn {
-		padding: .8rem 2rem;
-		border-radius: 5rem;
-		background: linear-gradient(90deg, #ff9966, #ff5e62);
-		color: #fff;
-		font-size: .7rem;
-		border: none;
-		outline: none;
-		cursor: pointer;
-	}
-</style>
+		.subscribe-btn {
+			padding: .8rem 2rem;
+			border-radius: 5rem;
+			background: linear-gradient(90deg, #ff9966, #ff5e62);
+			color: #fff;
+			font-size: .7rem;
+			border: none;
+			outline: none;
+			cursor: pointer;
+		}
+	</style>
+	<meta name="google-site-verification" content="FSRw_cDfesWTQKxadSGqUAhtx4RxX7Ip8tLHvbDYkkg" />
+	<title>mohamed agoumi portofolio</title>
+</head>
 <body>
 
 <div class="bgimg">
